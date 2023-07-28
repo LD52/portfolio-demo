@@ -1,38 +1,254 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.root {
+  display: flex; 
+  background-color: black ;
+  justify-content: space-between;
+  box-shadow: 1px 5px 5px skyblue;
+  margin-bottom: 0.5rem;
+
+}
+.boat{
+  height:50px; 
+  width: 30%;
+  display: flex; 
+  margin-top: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.beam{
+  height: 100%;
+  display: flex; 
+  align-items: center;
+  width: 100%;
+}
+.beam div {
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box-img{
+  width: 20%; 
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: 2rem;
+  margin-right: 6rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+
+
+.logo{
+  height: 100%;
+  width: 50%;
+  border-radius: 4px;
+}
+
+.be{
+  width: 25%; 
+  height: 100%;  
+  color: white;
+  display: flex; 
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.petrol{
+  display: flex;
+  align-items: center;
+}
+
+.have{
+  padding-top: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.veloppe{
+  height: 50%;
+  width: 70%;
+  margin-right: 2rem;
+}
+
+.second-boat{
+  margin-top: 1rem;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+
+.link{
+  margin-right: 2rem;
+  text-decoration: none;
   color: white;
+  transition: ease-in-out 1s;
 }
 
-.App-link {
-  color: #61dafb;
+.link:hover {
+  color: rgb(47, 110, 228);
+  transition: ease-in-out 1s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.third-boat{
+  height: 50px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  width: 15%;
 }
+
+.network{
+  height: 50%;
+  width: 70%;
+}
+.thboat{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto; 
+}
+
+
+.cooker{
+  color: skyblue;
+  margin-top: 2rem;
+  border-radius: 10px;
+  display: flex;
+  margin-left: 2rem;
+  width: 50%;
+  align-items: center;
+  box-shadow: 2px 5px 4px skyblue;
+  justify-content: center;
+  height: auto;
+  font-size: 1.3rem;
+  font-family:cursive; 
+  display: block; 
+}
+
+.root-coder{
+  height: 80vh; 
+  display: flex;
+  width: 100%;
+}
+
+
+.img-right{
+  height: 90%; 
+  display: flex;
+  width: 50%;
+  overflow: auto;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  align-items: center;
+  margin-left: 1rem;
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px skyblue;
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 10px 6px 0px skyblue;
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px skyblue;
+		transform: translatey(0px);
+	}
+}
+
+.portrait{
+  border-radius: 50%; 
+  height: 90%; 
+  box-shadow: 2px 5px 4px skyblue;
+  width: 70%;
+  transform: translateY(0px);
+  animation: float 2s ease-in-out infinite; 
+  overflow: hidden;
+  max-width: 100%;
+  opacity: 1;
+  transition: 1s ease-in-out;
+  box-sizing: border-box;
+}
+
+.cercle{
+  height: 100%;
+  width: 100%;
+}
+
+.portrait:hover{
+  opacity: 0.4;
+  transition: 2s ease-in-out;
+}
+
+.end-part{
+  text-align:center;
+  background:black; 
+  color:skyblue;
+  font-family:'Roboto';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight:900;
+  font-size:32px;
+  height:8vh;
+  overflow:hidden;
+  
+}
+
+
+.goal, .purpose {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.goal {  
+  animation: showup 7s infinite;
+}
+
+.purpose {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+.purpose span {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+
+
